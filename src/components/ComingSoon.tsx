@@ -1,6 +1,9 @@
 import { Zap, Clock, Mail } from 'lucide-react';
+import { PrankButton } from './NotifyAlert';
 
 const ComingSoon = () => {
+
+
   return (
     <div className="min-h-screen bg-gradient-to-b from-[#f8f9fa] to-white flex flex-col">
      
@@ -36,9 +39,7 @@ const ComingSoon = () => {
                 placeholder="Your email address" 
                 className="flex-grow px-4 py-2 border border-[#d1cfd2] rounded-lg focus:outline-none focus:ring-2 focus:ring-[#78c3e3]"
               />
-              <button className="bg-[#4c2278] hover:bg-[#5d2d8f] text-white font-medium px-6 py-2 rounded-lg transition">
-                Notify Me
-              </button>
+              <PrankButton />
             </div>
           </div>
         </div>

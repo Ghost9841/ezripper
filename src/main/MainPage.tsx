@@ -14,13 +14,13 @@ const LandingPage = () => {
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-4">
             <a
-              href="#gif-maker"
+              href="/video-tools/video-to-mp3"
               className="bg-[#4c2278] hover:bg-[#5d2d8f] text-white font-bold py-3 px-8 rounded-lg transition transform hover:scale-105 shadow-lg"
             >
               Start Creating
             </a>
             <a
-              href="#tools"
+              href="/coming-soon"
               className="border-2 border-[#4c2278] text-[#4c2278] hover:bg-[#4c2278]/10 font-bold py-3 px-8 rounded-lg transition"
             >
               Explore Tools

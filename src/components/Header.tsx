@@ -72,10 +72,10 @@ const Header = () => {
       <div className="container mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
           {/* Logo */}
-          <div className="flex items-center space-x-2">
+          <a href="/" className="flex items-center space-x-2">
             <img src={logo} alt="Ez Ripper" className="w-16 h-16 rounded-full" />
             <h1 className="text-xl font-bold">Ez Ripper</h1>
-          </div>
+          </a>
 
           {/* Main Navigation */}
           <nav className="hidden md:flex items-center space-x-1">
