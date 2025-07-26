@@ -40,7 +40,7 @@ const LandingPage = () => {
             Join thousands of users who edit their videos, GIFs, and images with Ez Ripper every day.
           </p>
           <a
-            href="#gif-maker"
+            href="/video-tools/video-to-mp3"
             className="inline-block bg-white text-[#4c2278] hover:bg-gray-100 font-bold py-3 px-8 rounded-lg transition transform hover:scale-105 shadow-lg"
           >
             Get Started Now

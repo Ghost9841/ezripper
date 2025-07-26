@@ -1,5 +1,5 @@
 import  { useState } from 'react';
-import { ChevronDown, Plus, Film, Music, Image, Sliders } from 'lucide-react';
+import { ChevronDown, Plus, Film, Music, Image, Sliders, Music3Icon } from 'lucide-react';
 import logo from "@/assets/ez_ripper_logo.jpeg";
 import { useNavigate } from 'react-router-dom';
 
@@ -79,6 +79,13 @@ const Header = () => {
 
           {/* Main Navigation */}
           <nav className="hidden md:flex items-center space-x-1">
+            <button
+                  onClick={()  =>  navigate('/video-tools/video-to-mp3')}
+                  className="flex items-center cursor-pointer px-4 py-2 rounded-lg hover:bg-[#78c3e3]/20 transition-colors"
+                >
+                  <span className="mr-2"><Music3Icon/></span>
+                  Video To MP3
+              </button>
             {menuItems.map((item) => (
               <div key={item.name} className="relative group">
                 <button

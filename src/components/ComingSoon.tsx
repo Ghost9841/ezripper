@@ -1,4 +1,4 @@
-import { Zap, Clock, Mail } from 'lucide-react';
+import { Zap, Clock,  } from 'lucide-react';
 import { PrankButton } from './NotifyAlert';
 
 const ComingSoon = () => {
