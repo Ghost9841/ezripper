@@ -1,63 +1,68 @@
 import  { useState } from 'react';
 import { ChevronDown, Plus, Film, Music, Image, Sliders } from 'lucide-react';
 import logo from "@/assets/ez_ripper_logo.jpeg";
+import { useNavigate } from 'react-router-dom';
 
 const Header = () => {
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
-
+  const navigate = useNavigate();
   const toggleDropdown = (menu: string) => {
     setActiveDropdown(activeDropdown === menu ? null : menu);
   };
+
+  function redirectToComingSoon () {
+    navigate('/coming-soon');
+  }
 
   const menuItems = [
     {
       name: 'Video Tools',
       icon: <Film size={18} />,
       dropdown: [
-        { name: 'MP4 to GIF', action: () => console.log('MP4 to GIF') },
-        { name: 'Video to MP3', action: () => console.log('Video to MP3') },
-        { name: 'Video Compressor', action: () => console.log('Compress Video') },
-        { name: 'Video Trimmer', action: () => console.log('Trim Video') },
+        { name: 'MP4 to GIF', action: () => redirectToComingSoon()  },
+        { name: 'Video to MP3', action:  () => navigate('/video-tools/video-to-mp3')},
+        { name: 'Video Compressor', action:() => redirectToComingSoon()  },
+        { name: 'Video Trimmer', action: () => redirectToComingSoon()  },
       ]
     },
     {
       name: 'Audio Tools',
       icon: <Music size={18} />,
       dropdown: [
-        { name: 'MP3 Cutter', action: () => console.log('Cut MP3') },
-        { name: 'Audio Converter', action: () => console.log('Convert Audio') },
-        { name: 'Volume Booster', action: () => console.log('Boost Volume') },
-        { name: 'Audio Joiner', action: () => console.log('Join Audio') },
+        { name: 'MP3 Cutter', act: () => redirectToComingSoon()  },
+        { name: 'Audio Converter', action:  () => redirectToComingSoon()  },
+        { name: 'Volume Booster', action: () => redirectToComingSoon()  },
+        { name: 'Audio Joiner', action: () => redirectToComingSoon()  },
       ]
     },
     {
       name: 'Image Tools',
       icon: <Image size={18} />,
       dropdown: [
-        { name: 'Image Resizer', action: () => console.log('Resize Image') },
-        { name: 'Image Cropper', action: () => console.log('Crop Image') },
-        { name: 'Image Converter', action: () => console.log('Convert Image') },
-        { name: 'Image Compressor', action: () => console.log('Compress Image') },
+        { name: 'Image Resizer', action:  () => redirectToComingSoon()  },
+        { name: 'Image Cropper', action: () => redirectToComingSoon()  },
+        { name: 'Image Converter', action:  () => redirectToComingSoon()  },
+        { name: 'Image Compressor', action:  () => redirectToComingSoon()  },
       ]
     },
     {
       name: 'Edit',
       icon: <Sliders size={18} />,
       dropdown: [
-        { name: 'Rotate', action: () => console.log('Rotate') },
-        { name: 'Crop', action: () => console.log('Crop') },
-        { name: 'Resize', action: () => console.log('Resize') },
-        { name: 'Effects', action: () => console.log('Add Effects') },
+        { name: 'Rotate', action: () => redirectToComingSoon()  },
+        { name: 'Crop', action: () => redirectToComingSoon()  },
+        { name: 'Resize', action: () => redirectToComingSoon()  },
+        { name: 'Effects', action: () => redirectToComingSoon()  },
       ]
     },
     {
       name: 'More Tools',
       icon: <Plus size={18} />,
       dropdown: [
-        { name: 'Watermark Adder', action: () => console.log('Add Watermark') },
-        { name: 'Subtitle Adder', action: () => console.log('Add Subtitles') },
-        { name: 'Video Merger', action: () => console.log('Merge Videos') },
-        { name: 'Quality Optimizer', action: () => console.log('Optimize Quality') },
+        { name: 'Watermark Adder', action:  () => redirectToComingSoon()  },
+        { name: 'Subtitle Adder', action:  () => redirectToComingSoon()  },
+        { name: 'Video Merger', action:  () => redirectToComingSoon()  },
+        { name: 'Quality Optimizer', action:() => redirectToComingSoon()  },
       ]
     }
   ];
@@ -92,7 +97,9 @@ const Header = () => {
                       <button
                         key={subItem.name}
                         onClick={() => {
-                          subItem.action();
+                          if (subItem.action) {
+                            subItem.action();
+                          }
                           setActiveDropdown(null);
                         }}
                         className="block w-full text-left px-4 py-2 hover:bg-[#4c2278]/10 hover:text-[#4c2278] transition-colors"

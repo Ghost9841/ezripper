@@ -2,6 +2,8 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Header from './components/Header';
 import MainPage from './main/MainPage';
 import Footer from './components/Footer';
+import ComingSoon from './components/ComingSoon';
+import VideoToMp3 from './converter/tomp3/pages/VideoToMp3';
 
 // Video Tools
 // import Mp4ToGif from './pages/video-tools/Mp4ToGif';
@@ -46,10 +48,11 @@ const App = () => {
           <Routes>
             {/* Home */}
             <Route path="/" element={<MainPage />} />
+            <Route path="/coming-soon" element={<ComingSoon />} />
             
             Video Tools
             {/* <Route path="/video-tools/mp4-to-gif" element={<Mp4ToGif />} /> */}
-            {/* <Route path="/video-tools/video-to-mp3" element={<VideoToMp3 />} /> */}
+            <Route path="/video-tools/video-to-mp3" element={<VideoToMp3 />} />
             {/* <Route path="/video-tools/video-compressor" element={<VideoCompressor />} /> */}
             {/* <Route path="/video-tools/video-trimmer" element={<VideoTrimmer />} /> */}
             

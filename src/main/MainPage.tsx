@@ -1,18 +1,8 @@
-import {
-  Card,
-  CardHeader,
-  CardTitle,
-  CardContent,
-  CardFooter,
-} from "@/components/ui/card"
-import { Download, Sliders, UploadCloud } from "lucide-react";
 import HowItWorks from "./HowITWorks";
 const LandingPage = () => {
 
   return (
     <div className="">
-
-
       {/* Hero Section */}
       <section className="md:py-24 px-4 text-center">
         <div className="max-w-4xl mx-auto">
