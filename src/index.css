@@ -118,3 +118,43 @@
     @apply bg-background text-foreground;
   }
 }
+
+:root {
+  /* ... existing variables ... */
+  
+  /* Updated Color Palette */
+  --primary: #4c2278;        /* Your purple */
+  --primary-foreground: #ffffff; /* White text on primary */
+  
+  --secondary: #78c3e3;      /* Your light blue */
+  --secondary-foreground: #1a1a1a; /* Dark text on secondary */
+  
+  --muted: #d1cfd2;         /* Your gray */
+  --muted-foreground: #4a4a4a;
+  
+  --accent: #63cff5;        /* Your bright blue */
+  --accent-foreground: #1a1a1a;
+  
+  --dark-gray: #9a939a;     /* Your dark gray */
+  --light-blue: #78c3e3;    /* Secondary color alias */
+  --bright-blue: #63cff5;   /* Accent color alias */
+  
+  /* ... rest of your existing variables ... */
+}
+
+.dark {
+  /* Dark mode adjustments */
+  --primary: #5d2d8f;        /* Lighter purple for dark mode */
+  --primary-foreground: #ffffff;
+  
+  --secondary: #63cff5;      /* Using bright blue as secondary in dark mode */
+  --secondary-foreground: #1a1a1a;
+  
+  --muted: #9a939a;         /* Using dark gray as muted in dark mode */
+  --muted-foreground: #e0e0e0;
+  
+  --accent: #78c3e3;        /* Using light blue as accent in dark mode */
+  --accent-foreground: #1a1a1a;
+  
+  /* ... rest of your dark mode variables ... */
+}
