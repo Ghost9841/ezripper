@@ -42,7 +42,7 @@ const App = () => {
       <div className="min-h-screen flex flex-col">
         <Header />
         
-        <main className="flex-grow container mx-auto px-4 py-8">
+        <main className="flex-grow container mx-auto px-4 ">
           <Routes>
             {/* Home */}
             <Route path="/" element={<MainPage />} />
@@ -82,7 +82,7 @@ const App = () => {
           </Routes>
         </main>
         
-        {/* <Footer /> */}]
+        {/* <Footer /> */}
         <Footer/>
       </div>
     </Router>
