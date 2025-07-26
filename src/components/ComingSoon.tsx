@@ -44,13 +44,6 @@ const ComingSoon = () => {
           </div>
         </div>
       </main>
-
-      {/* Footer */}
-      <footer className="bg-[#4c2278] text-white py-6">
-        <div className="container mx-auto px-4 text-center text-sm">
-          <p>© {new Date().getFullYear()} Ez Ripper. All rights reserved.</p>
-        </div>
-      </footer>
     </div>
   );
 };
