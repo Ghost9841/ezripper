@@ -5,7 +5,7 @@ const ComingSoon = () => {
 
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-[#f8f9fa] to-white flex flex-col">
+    <div className="min-h-screen flex flex-col">
      
 
       {/* Main Content */}
